@@ -1,93 +1,245 @@
-
-/* basic responsive image css */
-img, video{
-  max-width: 100%;
-  height: auto;
+/* ======================
+   Global Reset
+   Normalize margins, paddings, and box-sizing
+====================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-.landmarks-grid{
+
+/* ======================
+   Base Styles
+   Body background, typography, and overflow control
+====================== */
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background: linear-gradient(to bottom, #b8b2a5, #6f6c69);
+  color: #fff;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* ======================
+   Fog Overlay
+   Animated clouds for atmospheric depth
+====================== */
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  background: url('images/cloud.png') repeat;
+  opacity: 1.15;
+  animation: fogMove 160s linear infinite;
+  z-index: 1;
+}
+
+@keyframes fogMove {
+  from { transform: translate3d(-25%, 0, 0); }
+  to { transform: translate3d(25%, 0, 0); }
+}
+
+/* ======================
+   Hero Section
+   Flex layout for image and text; hover interactions
+====================== */
+.landing {
+  display: flex;
+  max-width: 1200px;
+  margin: 6rem auto;
+  height: 80vh;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  z-index: 3;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  background: rgba(0,0,0,0.25);
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem;
+  width: 100%;
+}
+
+.image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.main-image {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 20px;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.main-image:hover {
+  transform: scale(1.05) rotate(-1deg);
+  box-shadow: 0 0 50px rgba(255, 215, 0, 0.6);
+}
+
+.text-container {
+  flex: 1;
+  padding-left: 2rem;
+}
+
+.text-container h1 {
+  font-size: 3rem;
+  color: #fff;
+}
+
+.intro {
+  font-size: 1.2rem;
+  color: #f6d58d;
+  margin: 1rem 0;
+}
+
+.description {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* ======================
+   Video Section
+   Responsive iframe with hover effects
+====================== */
+.video-section {
+  text-align: center;
+  margin: 3rem auto;
+  max-width: 900px;
+  position: relative;
+  z-index: 3;
+}
+
+.videoWrapper {
+  position: relative;
+  padding-top: 25px;
+  height: 0;
+}
+
+.videoWrapper.ratio-16-9 {
+  padding-bottom: 56.25%;
+}
+
+.videoWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  border: none;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.videoWrapper iframe:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 50px rgba(255, 215, 0, 0.6);
+}
+
+/* ======================
+   Featured Landmark Section
+   Highlighted landmark with image, caption, and description
+====================== */
+.featured {
+  text-align: center;
+  margin: 3rem auto;
+  max-width: 900px;
+  width: 90%;
+  position: relative;
+  z-index: 3;
+}
+
+.featured p {
+  margin: 1rem 0;
+  line-height: 1.6;
+}
+
+.featured img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 15px;
+  box-shadow: 0 0 25px rgba(255, 215, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.featured img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 60px rgba(255, 215, 0, 0.5);
+}
+
+.image-caption {
+  font-size: 0.9rem;
+  color: #ffd47f;
+  margin-top: 0.5rem;
+}
+
+/* ======================
+   Gallery Section
+   Grid layout for multiple landmarks with hover effects
+====================== */
+.gallery {
+  text-align: center;
+  max-width: 1200px;
+  margin: 4rem auto;
+  position: relative;
+  z-index: 3;
+}
+
+.gallery-grid {
   display: grid;
-  grid-gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-}
-figure{ margin:0;}
-
-
-
-.videoWrapper {
-	position: relative;
-	padding-top: 25px;
-	height: 0;
-  clear:both;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 2rem;
+  margin-top: 2rem;
 }
 
-/* 16:9 aspect ratio wrapper */
-.videoWrapper.ratio-16-9{
-    padding-bottom: 56.25%; /* 9 ÷ 16 = .5625 which is 56.25% */
+.gallery-grid figure {
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
 }
 
-/* 4:3 aspect ratio wrapper */
-.videoWrapper.ratio-4-3{
-    padding-bottom: 75%; /* 3 ÷ 4 = .75 which is 75% */
+.gallery-grid figure:hover {
+  transform: translateY(-10px) rotate(-1deg);
+  box-shadow: 0 15px 40px rgba(255, 215, 0, 0.5);
 }
 
-.videoWrapper iframe {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
+.gallery-grid img {
+  width: 100%;
+  display: block;
+  transition: transform 0.3s ease;
 }
 
-
-
-
-
-
-/* ----------------------
-This just makes the text look nicer
----------------------- */
-.videoWrapper {
-	position: relative;
-	padding-top: 25px;
-	height: 0;
-  clear:both;
+.gallery-grid img:hover {
+  transform: scale(1.05);
 }
 
-/* 16:9 aspect ratio wrapper */
-.videoWrapper.ratio-16-9{
-    padding-bottom: 56.25%; /* 9 ÷ 16 = .5625 which is 56.25% */
+figcaption {
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: #ffd47f;
 }
 
-/* 4:3 aspect ratio wrapper */
-.videoWrapper.ratio-4-3{
-    padding-bottom: 75%; /* 3 ÷ 4 = .75 which is 75% */
-}
-
-.videoWrapper iframe {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-}
-
-
-
-
-
-
-/* ----------------------
-This just makes the text look nicer
----------------------- */
-html{font-size:18px;}
-body{
-  font-family: -apple-system, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-  line-height: 1.5
-}
-p, li{ margin-bottom: 1rem;}
-.side-note{font-size:1.1rem; font-style: italic;max-width:90%;}
-pre{font-family: Menlo, Consolas, Monaco, "Courier New", monospace; padding:1rem;border: 1px solid #999999;}
-code{font-weight:600;}
-.videoWrapper {
-  margin-bottom: 2rem; /* adds space between videos */
+/* ======================
+   Footer
+   Basic site credits
+====================== */
+.footer {
+  text-align: center;
+  padding: 2rem;
+  color: #ccc;
+  border-top: 1px solid rgba(255, 215, 0, 0.2);
+  position: relative;
+  z-index: 3;
 }

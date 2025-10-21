@@ -1,81 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NYC Landmarks</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NYC Landmarks</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-    <header>
-        <div class="site-title">NYC Landmarks</div>
-    </header>
 
-    <main>
-        <h1>NYC Landmarks Virtual Tour</h1>
-        <p class="intro">This site highlights some interesting landmarks across New York City's five boroughs.</p>
-        <div class="videoWrapper ratio-16-9">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/_xkg7pNSp9M?si=G3wXZT-yawiTu4AN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-         <div class="videoWrapper ratio-16-9">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/15aY-JcGB-c?si=TTGI9xgMpVO6Dypz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-         </div>
-        <h2>Feautured Landmark</h2>
-        <!-- Featured image using <picture> -->
-        <picture>
-            <!-- Large screens (desktop/tablet) -->
-            <source media="(min-width: 645px)" srcset="images/pexels-kelsey-caroline-774981359-19122990.jpg>
+  <!-- ======================
+       Landing / Hero Section
+       Main introduction with hero image and text
+  ======================= -->
+  <main class="landing">
+    <section class="hero">
+      <div class="image-container">
+        <img src="images/chrysler.png" alt="Chrysler Building" class="main-image" />
+      </div>
+      <div class="text-container">
+        <h1><strong>NYC Landmarks</strong><br />Virtual Tour</h1>
+        <p class="intro">
+          <em>Explore iconic landmarks across New York City's five boroughs.</em>
+        </p>
+        <p class="description">
+          Discover historic sites and famous attractions throughout the city. 
+          <strong>Click through to explore!</strong>
+        </p>
+      </div>
+    </section>
+  </main>
 
-            <!-- Small screens (mobile) -->
-            <source media="(max-width: 644px)" srcset="images/pexels-kelsey-caroline-774981359-19122990.jpg">
+  <!-- ======================
+       Video Section
+       Embedded video showcasing NYC landmarks
+  ======================= -->
+  <section class="video-section">
+    <div class="videoWrapper ratio-16-9">
+      <iframe
+        src="https://www.youtube.com/embed/_xkg7pNSp9M?si=G3wXZT-yawiTu4AN"
+        title="NYC Landmarks Video"
+        allowfullscreen
+      ></iframe>
+    </div>
+  </section>
 
-            <!-- Fallback image -->
-            <img src="images/pexels-kelsey-caroline-774981359-19122990.jpg" alt="Wonder Wheel ferris wheel at Coney Island">
-        </picture>
-        <h3>NYC landmarks</h3>
-        <div class="landmarks-grid">
-            <figure>
-                <img src="images/square//pexels-kelsey-caroline-774981359-19122990.jpg"
-                    alt="Wonder Wheel ferris wheel at Coney Island">
-                <figcaption><a href="https://www.pexels.com/photo/ferris-wheel-in-amusement-park-19122990/">Photo by
-                        Kelsey Caroline</a></figcaption>
-            </figure>
-            <figure>
-                <img src="images/square//pexels-loquellano-12404963.jpg"
-                    alt=" Roosevelt Island Tramway leaving Manhattan">
-                <figcaption><a href="https://www.pexels.com/photo/cable-car-above-city-street-12404963/
-"></a>Photo by Raphael Loquellano</figcaption>
-            </figure>
-            <figure>
-                <img src="images/square//pexels-malcolmhill-12360516.jpg" alt="Yankee Stadium">
-                <figcaption><a href="https://www.pexels.com/photo/yankee-stadium-under-the-blue-sky-12360516/
-"></a>Photo by Malcolm Hill</figcaption>
-            </figure>
-            <figure>
-                <img src="images/square//pexels-mora-versio-2150673251-34091093.jpg" alt="Statue of Liberty">
-                <figcaption><a href="https://www.pexels.com/photo/statue-of-liberty-in-new-york-city-usa-34091093/
-"></a>Photo by Mora Versio</figcaption>
-            </figure>
-            <figure>
-                <img src="images/square//pexels-tracehudson-2424391.jpg"
-                    alt="Empire State Building with lower Manhattan in the background">
-                <figcaption><a href="https://www.pexels.com/photo/empire-state-building-2424391/
-"></a>Photo by Trace Hudson</figcaption>
-            </figure>
-            <figure>
-                <img src="images/square//praswin-prakashan-YOCN1a1m_dg-unsplash.jpg"
-                    alt="Staten Island Ferry pulling into the dock">
-                <figcaption><a href="https://unsplash.com/photos/a-large-ferry-boat-in-a-body-of-water-YOCN1a1m_dg
-"></a>Photo by Praswin Prakashan</figcaption>
-            </figure>
-        </div>
-    </main>
+  <!-- ======================
+       Featured Landmark Section
+       Highlights a single landmark with description and image
+  ======================= -->
+  <section class="featured">
+    <h2>Featured Landmark</h2>
+    <img src="images/pexels-kelsey-caroline-774981359-19122990.jpg" alt="Featured Landmark" />
+    <p class="image-caption">
+      The Wonder Wheel is the iconic ferris wheel at Deno’s Wonder Wheel Amusement Park in Coney Island, Brooklyn. Standing 150 feet tall, it has been a centerpiece of the boardwalk skyline since 1920.
+    </p>
+    <p>
+      Coney Island has been a hub of seaside amusement for more than a century, known for its thrilling rides, bright lights, and summertime energy. From the historic Cyclone roller coaster to modern attractions, it remains one of New York City’s most beloved destinations for fun by the beach.
+    </p>
+  </section>
 
-    <footer>
-        <p>Site by Ben</p>
-    </footer>
+  <!-- ======================
+       Visual Gallery Section
+       Displays multiple landmarks with images and captions
+  ======================= -->
+  <section class="gallery">
+    <h2>NYC landmarks</h2>
+    <div class="gallery-grid">
+
+      <!-- Gallery Item 1 -->
+      <figure>
+        <img src="images/square/pexels-kelsey-caroline-774981359-19122990.jpg" alt="Wonder Wheel ferris wheel at Coney Island">
+        <figcaption>
+          <a href="https://www.pexels.com/photo/ferris-wheel-in-amusement-park-19122990/"></a>by Kelsey Caroline
+        </figcaption>
+        <p>
+          Wonder Wheel – Coney Island: Ride the historic Wonder Wheel, a century-old ferris wheel with sliding and stationary gondolas, offering stunning views of the beach, boardwalk, and NYC skyline.
+        </p>
+      </figure>
+
+      <!-- Gallery Item 2 -->
+      <figure>
+        <img src="images/square/pexels-loquellano-12404963.jpg" alt="Roosevelt Island Tramway leaving Manhattan">
+        <figcaption>
+          <a href="https://www.pexels.com/photo/cable-car-above-city-street-12404963/"></a>Photo by Raphael Loquellano
+        </figcaption>
+        <p>Roosevelt Island Tramway leaving Manhattan</p>
+      </figure>
+
+      <!-- Gallery Item 3 -->
+      <figure>
+        <img src="images/square/pexels-malcolmhill-12360516.jpg" alt="Yankee Stadium">
+        <figcaption>
+          <a href="https://www.pexels.com/photo/yankee-stadium-under-the-blue-sky-12360516/"></a>Photo by Malcolm Hill
+        </figcaption>
+        <p>
+          Yankee Stadium: Home of the legendary New York Yankees, a modern icon of baseball, excitement, and unforgettable sports moments in the Bronx.
+        </p>
+      </figure>
+
+      <!-- Gallery Item 4 -->
+      <figure>
+        <img src="images/square/pexels-mora-versio-2150673251-34091093.jpg" alt="Statue of Liberty">
+        <figcaption>
+          <a href="https://www.pexels.com/photo/statue-of-liberty-in-new-york-city-usa-34091093/"></a>Photo by Mora Versio
+        </figcaption>
+        <p>
+          Statue of Liberty: An enduring symbol of freedom, standing tall on Liberty Island, welcoming visitors with its iconic torch and inspiring views of New York Harbor.
+        </p>
+      </figure>
+
+      <!-- Gallery Item 5 -->
+      <figure>
+        <img src="images/square/pexels-tracehudson-2424391.jpg" alt="Empire State Building with lower Manhattan in the background">
+        <figcaption>
+          <a href="https://www.pexels.com/photo/empire-state-building-2424391/"></a>Photo by Trace Hudson
+        </figcaption>
+        <p>
+          Empire State Building: Soaring above Midtown Manhattan, offering iconic skyline views and a timeless symbol of New York’s ambition and energy.
+        </p>
+      </figure>
+
+      <!-- Gallery Item 6 -->
+      <figure>
+        <img src="images/square/praswin-prakashan-YOCN1a1m_dg-unsplash.jpg" alt="Staten Island Ferry pulling into the dock">
+        <figcaption>
+          <a href="https://unsplash.com/photos/a-large-ferry-boat-in-a-body-of-water-YOCN1a1m_dg"></a>Photo by Praswin Prakashan
+        </figcaption>
+        <p>
+          Staten Island Ferry: Watch it glide into the dock, offering free scenic rides with stunning views of the Statue of Liberty and Manhattan skyline.
+        </p>
+      </figure>
+
+    </div>
+  </section>
+
+  <!-- ======================
+       Footer Section
+       Site credits and basic info
+  ======================= -->
+  <footer class="footer">
+    <p>Site by Ben</p>
+  </footer>
+
 </body>
-
 </html>
