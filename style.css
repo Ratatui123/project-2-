@@ -1,6 +1,5 @@
 /* ======================
-   Global Reset
-   Normalize margins, paddings, and box-sizing
+   Global Reset & Base Styles
 ====================== */
 * {
   margin: 0;
@@ -8,10 +7,6 @@
   box-sizing: border-box;
 }
 
-/* ======================
-   Base Styles
-   Body background, typography, and overflow control
-====================== */
 body {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   background: linear-gradient(to bottom, #b8b2a5, #6f6c69);
@@ -21,8 +16,7 @@ body {
 }
 
 /* ======================
-   Fog Overlay
-   Animated clouds for atmospheric depth
+   Fog Overlay (Extra Cool Effect)
 ====================== */
 body::before,
 body::after {
@@ -44,8 +38,7 @@ body::after {
 }
 
 /* ======================
-   Hero Section
-   Flex layout for image and text; hover interactions
+   Landing / Hero Section
 ====================== */
 .landing {
   display: flex;
@@ -109,7 +102,6 @@ body::after {
 
 /* ======================
    Video Section
-   Responsive iframe with hover effects
 ====================== */
 .video-section {
   text-align: center;
@@ -147,8 +139,7 @@ body::after {
 }
 
 /* ======================
-   Featured Landmark Section
-   Highlighted landmark with image, caption, and description
+   Featured Section
 ====================== */
 .featured {
   text-align: center;
@@ -159,12 +150,7 @@ body::after {
   z-index: 3;
 }
 
-.featured p {
-  margin: 1rem 0;
-  line-height: 1.6;
-}
-
-.featured img {
+.featured-image {
   width: 100%;
   max-width: 600px;
   border-radius: 15px;
@@ -172,7 +158,7 @@ body::after {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.featured img:hover {
+.featured-image:hover {
   transform: scale(1.05);
   box-shadow: 0 0 60px rgba(255, 215, 0, 0.5);
 }
@@ -185,7 +171,6 @@ body::after {
 
 /* ======================
    Gallery Section
-   Grid layout for multiple landmarks with hover effects
 ====================== */
 .gallery {
   text-align: center;
@@ -233,7 +218,6 @@ figcaption {
 
 /* ======================
    Footer
-   Basic site credits
 ====================== */
 .footer {
   text-align: center;
