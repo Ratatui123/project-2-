@@ -14,9 +14,7 @@
   ======================= -->
   <main class="landing">
     <section class="hero">
-      <div class="image-container">
-        <img src="images/chrysler.png" alt="Chrysler Building" class="main-image" />
-      </div>
+      
       <div class="text-container">
         <h1><strong>NYC Landmarks</strong><br />Virtual Tour</h1>
         <p class="intro">
@@ -51,7 +49,23 @@
   <section class="featured">
   <h2>Featured Landmark</h2>
 
-  <img src="images/pexels-kelsey-caroline-774981359-19122990.jpg" alt="Wonder Wheel at Coney Island" class="featured-image">
+  <!-- Featured image using <picture> for art direction -->
+  <picture>
+    <!-- Large screens (desktop/tablet) -->
+    <source
+      media="(min-width: 645px)"
+      srcset="images/pexels-kelsey-caroline-774981359-19122990.jpg">
+
+    <!-- Small screens (mobile) -->
+    <source
+      media="(max-width: 644px)"
+      srcset="images/square/pexels-kelsey-caroline-774981359-19122990.jpg">
+
+    <!-- Fallback image -->
+    <img
+      src="images/pexels-kelsey-caroline-774981359-19122990.jpg"
+      alt="Wonder Wheel at Deno’s Wonder Wheel Amusement Park in Coney Island, Brooklyn">
+  </picture>
 
   <p class="image-caption">
     The Wonder Wheel is the iconic ferris wheel at Deno’s Wonder Wheel Amusement Park in Coney Island, Brooklyn. Standing 150 feet tall, it has been a centerpiece of the boardwalk skyline since 1920.
@@ -61,6 +75,7 @@
     Coney Island has been a hub of seaside amusement for more than a century, known for its thrilling rides, bright lights, and summertime energy. From the historic Cyclone roller coaster to modern attractions, it remains one of New York City’s most beloved destinations for fun by the beach.
   </p>
 </section>
+
   <!-- ======================
        Visual Gallery
        Landmark cards with hover effects
