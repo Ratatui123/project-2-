@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Statue of Liberty | NYC Landmarks</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ======================
+       Landing / Hero Section
+       Hero image + intro text
+  ======================= -->
+  <main class="landing">
+    <section class="hero">
+      <div class="text-container">
+        <h1><strong>Statue of Liberty</strong></h1>
+        <p class="intro">
+          <em>An enduring symbol of freedom and friendship between nations.</em>
+        </p>
+        <p class="description">
+          Standing proudly in New York Harbor, the Statue of Liberty represents hope, liberty, and the lasting bond between France and the United States.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- ======================
+       Featured Landmark
+       Responsive image with caption and description
+  ======================= -->
+  <section class="featured">
+    <h2>Featured Landmark</h2>
+
+    <!-- Featured image using <picture> for art direction -->
+    <picture>
+      <!-- Large screens (desktop/tablet) -->
+      <source
+        media="(min-width: 645px)"
+        srcset="images/pexels-mora-versio-2150673251-34091093.jpg">
+
+      <!-- Small screens (mobile) -->
+      <source
+        media="(max-width: 644px)"
+        srcset="images/square/pexels-mora-versio-2150673251-34091093.jpg">
+
+      <!-- Fallback image -->
+      <img
+        src="images/pexels-mora-versio-2150673251-34091093.jpg"
+        alt="The Statue of Liberty standing on Liberty Island in New York Harbor">
+    </picture>
+
+    <p class="image-caption">
+      The Statue of Liberty — designed by Frédéric Auguste Bartholdi and engineered by Gustave Eiffel — remains one of the most recognizable symbols in the world.
+    </p>
+
+    <p>
+      Built in France and dedicated in 1886, the statue was a gift from the French people to the United States. Shipped in pieces and reassembled on Liberty Island, it stands as a monument to democracy and friendship between nations.
+    </p>
+
+    <p>
+      Over the decades, the statue has welcomed millions arriving in New York Harbor. It remains both a national monument and a global icon of freedom.
+    </p>
+  </section>
+
+  <!-- ======================
+       More Info Section
+  ======================= -->
+  <section class="more-info">
+    <h3>More Info</h3>
+    <ul>
+      <li><a href="https://www.nps.gov/stli/" target="_blank" rel="noopener">National Park Service — Statue of Liberty Overview</a></li>
+      <li><a href="https://www.cityexperiences.com/new-york/city-cruises/statue/" target="_blank" rel="noopener">Tickets</a></li>
+      <li><a href="https://www.nps.gov/stli/planyourvisit/directions.htm" target="_blank" rel="noopener">How to Get to Liberty Island &amp; Visit the Statue</a></li>
+      <li><a href="https://en.wikipedia.org/wiki/Statue_of_Liberty" target="_blank" rel="noopener">Wikipedia: Statue of Liberty</a></li>
+    </ul>
+  </section>
+
+  <!-- ======================
+       Footer
+  ======================= -->
+  <footer class="footer">
+    <p>Site by Ben</p>
+  </footer>
+
+</body>
+</html>

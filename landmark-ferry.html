@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Staten Island Ferry | NYC Landmarks</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ======================
+       Landing / Hero Section
+       Hero image + intro text
+  ======================= -->
+  <main class="landing">
+    <section class="hero">
+      <div class="text-container">
+        <h1><strong>Staten Island Ferry</strong></h1>
+        <p class="intro">
+          <em>Free rides, skyline views, and a piece of New York history.</em>
+        </p>
+        <p class="description">
+          The Staten Island Ferry links Manhattan and Staten Island across New York Harbor, offering one of the city’s most scenic commutes — and it’s completely free.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- ======================
+       Featured Landmark
+       Responsive image with caption and description
+  ======================= -->
+  <section class="featured">
+    <h2>Featured Landmark</h2>
+
+    <!-- Featured image using <picture> for art direction -->
+    <picture>
+      <!-- Large screens (desktop/tablet) -->
+      <source
+        media="(min-width: 645px)"
+        srcset="/images/praswin-prakashan-YOCN1a1m_dg-unsplash.jpg">
+
+      <!-- Small screens (mobile) -->
+      <source
+        media="(max-width: 644px)"
+        srcset="/images/square/praswin-prakashan-YOCN1a1m_dg-unsplash.jpg">
+
+      <!-- Fallback image -->
+      <img
+        src="/images/praswin-prakashan-YOCN1a1m_dg-unsplash.jpg"
+        alt="Staten Island Ferry crossing New York Harbor with Manhattan skyline in background">
+    </picture>
+
+    <p class="image-caption">
+      The Staten Island Ferry offers one of the best free views of New York Harbor — from the Statue of Liberty to Lower Manhattan’s skyline.
+    </p>
+
+    <p>
+      The ferry service began in 1817 with the Richmond Turnpike Company and later came under New York City operation in 1905. It now carries millions of passengers each year between Staten Island and Lower Manhattan.
+    </p>
+
+    <p>
+      Beyond transportation, the ferry has become a local favorite for sightseeing — offering breathtaking views of the harbor, Ellis Island, and the Statue of Liberty.
+    </p>
+  </section>
+
+  <!-- ======================
+       More Info Section
+  ======================= -->
+  <section class="more-info">
+    <h3>More Info</h3>
+    <ul>
+      <li><a href="https://www.nyc.gov/html/dot/html/ferrybus/ferry-facts.shtml" target="_blank" rel="noopener">NYC DOT Staten Island Ferry – Facts &amp; History</a></li>
+      <li><a href="https://www.nyc.gov/html/dot/html/ferrybus/siferryschedule.shtml" target="_blank" rel="noopener">Ferry Schedule</a></li>
+      <li><a href="https://siferry.com/getting-there/" target="_blank" rel="noopener">How to Ride &amp; Directions</a></li>
+      <li><a href="https://en.wikipedia.org/wiki/Staten_Island_Ferry" target="_blank" rel="noopener">Wikipedia: Staten Island Ferry</a></li>
+    </ul>
+  </section>
+
+  <!-- ======================
+       Footer
+  ======================= -->
+  <footer class="footer">
+    <p>Site by Ben</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Empire State Building | NYC Landmarks</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ======================
+       Landing / Hero Section
+  ======================= -->
+  <main class="landing">
+    <section class="hero">
+      <div class="text-container">
+        <h1><strong>Empire State Building</strong></h1>
+        <p class="intro">
+          <em>An Art Deco masterpiece that once held the title of the world’s tallest building.</em>
+        </p>
+        <p class="description">
+          Standing proudly in Midtown Manhattan, the Empire State Building remains one of the most recognized
+          and celebrated landmarks in the world.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- ======================
+       Featured Image Section
+  ======================= -->
+  <section class="featured">
+    <h2>Featured Landmark</h2>
+
+    <!-- Responsive image using <picture> -->
+    <picture>
+      <!-- Large screens -->
+      <source media="(min-width: 645px)" srcset="/images/pexels-tracehudson-2424391.jpg">
+      <!-- Small screens -->
+      <source media="(max-width: 644px)" srcset="/images/square/pexels-tracehudson-2424391.jpg">
+      <!-- Fallback image -->
+      <img src="/images/pexels-tracehudson-2424391.jpg" alt="Empire State Building at sunset, Manhattan skyline">
+    </picture>
+
+    <p class="image-caption">
+      The Empire State Building is an Art Deco skyscraper in Midtown Manhattan that once held the title of the world’s tallest building.
+    </p>
+
+    <p>
+      <strong>Built:</strong> Constructed in a record 1 year and 45 days from 1930–1931, the 102-story tower was designed by the firm Shreve, Lamb &amp; Harmon Associates and opened on May 1, 1931, when President Hoover pressed a button in Washington, D.C. to light it up.
+    </p>
+
+    <p>
+      <strong>Today:</strong> Its rich history, timeless silhouette, and observation decks make it a global tourist destination and an official New York City and National Historic Landmark.
+    </p>
+  </section>
+
+  
+
+  <!-- ======================
+       More Info Links
+  ======================= -->
+  <section class="more-info">
+    <h3>More Info</h3>
+    <ul>
+      <li><a href="https://www.esbnyc.com/about/history" target="_blank" rel="noopener">Empire State Building – official history</a></li>
+      <li><a href="https://www.esbnyc.com/visit" target="_blank" rel="noopener">Visitor info: tickets &amp; directions</a></li>
+      <li><a href="https://en.wikipedia.org/wiki/Empire_State_Building" target="_blank" rel="noopener">Wikipedia: Empire State Building</a></li>
+    </ul>
+  </section>
+
+  <!-- ======================
+       Footer
+  ======================= -->
+  <footer class="footer">
+    <p>Site by Ben</p>
+  </footer>
+
+</body>
+</html>

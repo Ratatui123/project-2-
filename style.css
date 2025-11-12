@@ -213,3 +213,47 @@ img, video {
   max-width: 100%;
   height: auto;
 }
+/* ======================
+   More Info Section
+====================== */
+.more-info {
+  text-align: center;
+  margin: 4rem auto;
+  max-width: 800px;
+  width: 90%;
+  position: relative;
+  z-index: 3;
+  padding: 2rem;
+  border-top: 1px solid rgba(255, 215, 0, 0.2);
+}
+
+.more-info h3 {
+  font-size: 1.8rem;
+  color: #ffd47f;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.more-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.more-info li {
+  margin: 0.8rem 0;
+}
+
+.more-info a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: 1px solid transparent;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.more-info a:hover {
+  color: #ffd47f;
+  border-bottom: 1px solid #ffd47f;
+  text-shadow: 0 0 8px rgba(255, 215, 0, 0.5);
+}
