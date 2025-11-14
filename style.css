@@ -257,3 +257,30 @@ img, video {
   border-bottom: 1px solid #ffd47f;
   text-shadow: 0 0 8px rgba(255, 215, 0, 0.5);
 }
+/* ========== Circular Prev / Next Arrows ========== */
+.nav-arrows {
+  display: flex;
+  justify-content: center;
+  gap: 15px; /*  */
+  margin: 20px 0;
+}
+
+.arrow {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  font-size: 22px;
+  color: #333;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.arrow:hover {
+  background: #ebaf18;
+  border-color: #f10404;
+}
