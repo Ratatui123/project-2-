@@ -51,9 +51,7 @@ body {
 /* ======================
    Video Section
 ====================== */
-/* ======================
-   Video Section (Fixed & Larger)
-====================== */
+
 .video-section {
   text-align: center;
   margin: 5rem auto;
@@ -283,4 +281,127 @@ img, video {
 .arrow:hover {
   background: #ebaf18;
   border-color: #f10404;
+}
+
+
+
+/* ===========================
+      HEADER + NAVIGATION
+=========================== */
+
+/* Header Base */
+header {
+  background: #333;
+  color: #fff;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.logo {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+/* Hamburger */
+.menu-button {
+  background: #fff;
+  border: none;
+  border-radius: 20px; /* oval */
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.menu-button:hover {
+  background: #ffd47f;
+}
+
+.menu-button-text::before {
+  content: "Landmarks";
+}
+
+.menu-button[aria-expanded="true"] .menu-button-text::before {
+  content: "Close";
+}
+
+/* Nav (mobile hidden by default) */
+.menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, opacity 0.3s ease;
+  background: #333;
+  border-radius: 10px;
+}
+
+.menu.is-open {
+  max-height: 500px; /* enough to fit items */
+  opacity: 1;
+}
+
+.menu li + li {
+  border-top: 1px solid rgba(255,255,255,0.3);
+}
+
+.menu a {
+  display: block;
+  padding: 1rem 2rem;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 20px; /* oval */
+  transition: 0.3s ease;
+}
+
+.menu a:hover {
+  background: #ffd47f;
+  color: #333;
+  text-decoration: underline;
+}
+
+/* Desktop layout */
+@media (min-width: 1024px) {
+  .menu-button {
+    display: none;
+  }
+
+  nav {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .menu {
+    display: flex !important;
+    max-height: none;
+    opacity: 1;
+    flex-direction: row;
+    gap: 1rem;
+    background: none;
+    border-radius: 0;
+  }
+
+  .menu li + li {
+    border-top: none;
+  }
+
+  .menu a {
+    padding: 0.5rem 1.2rem;
+    border-radius: 20px;
+  }
+
+  .menu a:hover {
+    background: #ffd47f;
+    color: #333;
+    text-decoration: underline;
+  }
 }

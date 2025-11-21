@@ -7,6 +7,42 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+<!--header-->
+<header>
+  <div class="topbar">
+    <a href="index.html" class="logo">NYC Landmarks</a>
+    <button type="button" class="menu-button" aria-controls="menu" aria-expanded="false" aria-label="Toggle menu">
+      <span class="menu-button-text"></span>
+    </button>
+  </div>
+
+  <nav aria-label="Primary">
+    <ul id="menu" class="menu">
+      <li><a href="landmark-liberty.html">Statue of Liberty</a></li>
+      <li><a href="landmark-empire.html">Empire State Building</a></li>
+      <li><a href="landmark-ferry.html">Staten Island Ferry</a></li>
+      <li><a href="landmark-yankee.html">Yankee Stadium</a></li>
+      <li><a href="landmark-tram.html">Roosevelt Island Tram</a></li>
+      <li><a href="landrmark-wonderWheel.html">Wonder Wheel</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!--script-->
+
+
+<script>
+  const menuButton = document.querySelector('.menu-button'); // regular hyphen
+const menu = document.getElementById('menu');
+
+menuButton.addEventListener('click', () => {
+  const expanded = menuButton.getAttribute('aria-expanded') === 'true';
+  menuButton.setAttribute('aria-expanded', String(!expanded));
+  menu.classList.toggle('is-open');
+});
+
+</script>
+
 
   <!-- ======================
        Landing / Hero Section
